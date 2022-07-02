@@ -1,0 +1,19 @@
+(undo-tree-save-format-version . 1)
+"9d467324a4a1eaed2b64d9cf0fd2126c30694940"
+[nil nil nil nil (25278 50923 162515 782000) 0 nil]
+([nil nil ((nil rear-nonsticky nil 1 . 2) (#("
+" 0 1 (fontified nil)) . -2172) (1 . 2173) (t . -1)) nil (25278 50923 162514 109000) 0 nil])
+([nil nil ((#("G" 0 1 (fontified t)) . -19) (undo-tree-id21 . -1) (undo-tree-id22 . -1) (undo-tree-id23 . -1) 20 (19 . 20) (18 . 19) (17 . 18) (#("{" 0 1 (fontified t)) . -17) (undo-tree-id24 . -1) (undo-tree-id25 . -1) (undo-tree-id26 . -1) 18 (17 . 18) (9 . 17) (1 . 9)) nil (25278 50923 162511 344000) 0 nil])
+([nil nil ((#("     " 0 5 (fontified nil)) . 2191) (undo-tree-id17 . -5) (undo-tree-id18 . -5) (undo-tree-id19 . -5) (undo-tree-id20 . -5) (2196 . 2197) (2190 . 2196) 2189) nil (25278 50923 162504 982000) 0 nil])
+([nil nil ((nil face font-lock-constant-face 17 . 18) (nil fontified t 17 . 18) (17 . 18) 1) nil (25278 50923 162500 123000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . 18) (undo-tree-id12 . 1) (undo-tree-id13 . -1) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (undo-tree-id16 . -1)) nil (25278 50923 162498 79000) 0 nil])
+([nil nil ((nil face font-lock-constant-face 17 . 18) (nil fontified t 17 . 18) (17 . 18) 1) nil (25278 50923 162494 422000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . 18) (undo-tree-id6 . 1) (undo-tree-id7 . -1) (undo-tree-id8 . -1) (undo-tree-id9 . -1) (undo-tree-id10 . -1) (undo-tree-id11 . -1)) nil (25278 50923 162492 639000) 0 nil])
+([nil nil ((19 . 20) (nil syntax-table nil 19 . 20) (nil syntax-table (1) 10 . 11) (18 . 19) (nil syntax-table nil 18 . 19) (nil syntax-table (1) 10 . 11) (17 . 18) (nil syntax-table nil 17 . 18) (nil syntax-table (1) 10 . 11) (16 . 17) (nil syntax-table nil 16 . 17) (nil syntax-table (1) 10 . 11) (15 . 16) (nil syntax-table nil 15 . 16) (nil syntax-table (1) 10 . 11) (14 . 15) (nil syntax-table nil 14 . 15) (nil syntax-table (1) 10 . 11) (13 . 14) (nil syntax-table nil 13 . 14) (nil syntax-table (1) 10 . 11) (12 . 13) (nil syntax-table nil 12 . 13) (nil syntax-table (1) 10 . 11) (11 . 12) (nil syntax-table nil 11 . 12) (nil syntax-table (1) 10 . 11) (10 . 11) (#("c" 0 1 (fontified t c-in-sws t)) . -10) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (undo-tree-id2 . -1) 11 (2 . 11) (1 . 2) (#("$" 0 1 (fontified t)) . -1) (undo-tree-id3 . -1) (undo-tree-id4 . -1) (undo-tree-id5 . -1) 2 (1 . 2) (1 . 2)) nil (25278 50923 162485 355000) 0 nil])
+([nil nil ((2212 . 2213) 19) nil (25278 50923 162444 809000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 20 . 21) (#("
+" 0 1 (c-in-sws t fontified nil)) . -115) (20 . 116) 19 (t 25278 50923 169894 129000)) nil (25278 51080 660318 888000) 0 nil])
+([nil current ((116 . 117)) nil (25278 51080 660312 937000) 0 nil])
+nil
