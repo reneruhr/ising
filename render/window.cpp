@@ -12,24 +12,22 @@ namespace Render
 
 auto Init(int,int,std::string) -> GLFWwindow*;
 
-	
 Window::Window(std::string title, float ratio , int width)
 :
 title_(title), width_(width), height_(ratio * width), ratio_(ratio)
 {
 	window_ = Init(width_, height_, title_);
-	auto half_plane_view = std::make_shared<Camera>();
+	auto plane_view = std::make_shared<Camera>();
+/*
+(0,height)
+     |
+     |
+(0,0)|_______ (width, 0)
 
-/*height    |  |    |  |   height = 2 * ratio
- *          |  |    |  |
- *          |  |    |  |
- *          |  | __ |  |
- *          |  |/  \|  |
- *          | /|    |\ |
- *0       -1|/_|____|_\|1   width = 2
  */
-	half_plane_view->Projection({-1.f,1.f,0.f, 2.f * ratio ,-1.f,1.f});
-	cameras_.push_back(half_plane_view);
+	std::cout << "Creating window of size " << float(width_) << ", " << float(height_) << '\n';
+	plane_view->Projection({0.f,float(width_),0.f, float(height_) ,-1.f,1.f});
+	cameras_.push_back(plane_view);
 	active_camera_ = cameras_.back();
 	glfwSetWindowUserPointer(window_, reinterpret_cast<void*>(this));
 	glfwGetFramebufferSize(window_, &width_, &height_);
@@ -38,30 +36,37 @@ title_(title), width_(width), height_(ratio * width), ratio_(ratio)
 
 void Window::Run()
 {
-	while(!glfwWindowShouldClose(window_))
-	{
-		glClearColor(.3f,.2f,.2f,1.f);
-		glClear(GL_COLOR_BUFFER_BIT);
-		
-		ProcessInput(window_);
-		
-		for(auto& draw : drawcalls_) draw();		
-	
-		glfwSwapBuffers(window_);
-		glfwPollEvents();
-	}
+  while(!glfwWindowShouldClose(window_))
+  {
+    UpdateEvents();
+    Update();
+  }
+}
+
+void Window::UpdateEvents()
+{
+    glfwPollEvents();
+    ProcessInput(window_);
+}
+
+void Window::Update()
+{
+  glClearColor(.3f,.2f,.2f,1.f);
+  glClear(GL_COLOR_BUFFER_BIT);
+  for(auto& draw : drawcalls_) draw();		
+  glfwSwapBuffers(window_);
 }
 
 void Window::Exit()
 {
-	glfwTerminate();
+  glfwTerminate();
 }
 
 void Window::Resize(int w, int h) 
 { 
 	width_ = w; 
 	height_ = h; 
-	active_camera_->Projection({-1.f,1.f, 0.f, 2.f*h/w,-1.f,1.f});
+	active_camera_->Projection({0.f,float(width_),0.f, float(height_),-1.f,1.f});
 }
 
 void Window::AddDrawCall(std::function<void(void)> fct)

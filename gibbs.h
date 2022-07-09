@@ -1,5 +1,3 @@
-
-
 constexpr int size {10};
 constexpr int N = size*size;
 

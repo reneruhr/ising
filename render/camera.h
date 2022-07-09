@@ -18,8 +18,8 @@ struct Camera
 	glm::mat4 projection_;	
 	glm::mat4 pv_;
 	
-	glm::vec3 front_ = {0.0f, 0.0f, 0.5f};
-	glm::vec3 pos_ = {0.0f, 0.0f, -0.5f};
+	glm::vec3 front_ = {0.0f, 0.0f, -0.5f};
+	glm::vec3 pos_ = {0.0f, 0.0f, 0.5f};
 	glm::vec3 up_ = {0.0f, 1.0f, 0.0f};
 
 	OrthFrame ortho_frame_;

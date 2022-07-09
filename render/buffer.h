@@ -3,6 +3,7 @@
 #include <GLFW/glfw3.h>
 #include "../tools/tools.h"
 #include <functional>
+#include <iostream>
 
 namespace Render
 {
@@ -35,7 +36,8 @@ private:
     size_ = std::size(container);
     auto offset = std::size(attributes_) ? attributes_.back().offset_ + attributes_.back().size_  : 0;
 
-    
+    std::cout << "Adding Attribute (dim,size,offset)=" << dim  << ',' << size << ',' << offset <<'\n'; 
+    std::cout << "First/Last value= " << container[0] << container.back() << '\n';
     glBufferSubData(GL_ARRAY_BUFFER, offset,
 		    size,
 		    container.data()); 
@@ -45,16 +47,6 @@ private:
     attributes_.emplace_back(offset, size, dim);
   } 
 
-  template <class C>
-  void Update(const C& container, std::size_t index)
-  {
-    auto size = attributes_[index].size_; 
-    auto offset =  attributes_[index].offset_;
-
-    glBufferSubData(GL_ARRAY_BUFFER, 
-		    size,
-		    container.data());
-  }
 
 public:
   template <class ...C>
@@ -69,6 +61,16 @@ public:
     glBindVertexArray(0);
   }
 
+  template <class C>
+  void Update(const C& container, std::size_t index)
+  {
+    auto size = attributes_[index].size_; 
+    auto offset =  attributes_[index].offset_;
+
+    glBufferSubData(GL_ARRAY_BUFFER, offset,
+		    size,
+		    container.data()); 
+  }
   std::size_t Size() const { return size_; }
   unsigned int Vao() const { return vao_; }
 };
