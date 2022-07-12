@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"e49e3b8dabcdeb12077538418793690b9dd0cd1f"
+"fee78675497892d09166b1d8cdf00a2ac602b485"
 [nil nil nil nil (25280 25428 540446 772000) 0 nil]
 ([nil nil ((#(" " 0 1 (fontified t)) . 408) (t 25280 22276 406863 945000)) nil (25280 25428 540445 390000) 0 nil])
 ([nil nil ((#("," 0 1 (fontified t)) . 408)) nil (25280 25428 540444 228000) 0 nil])
@@ -8,5 +8,10 @@
 ([nil nil ((#("o" 0 1 (fontified t)) . 408)) nil (25280 25428 540440 982000) 0 nil])
 ([nil nil ((#("l" 0 1 (fontified t)) . 408)) nil (25280 25428 540439 779000) 0 nil])
 ([nil nil ((#("o" 0 1 (fontified t)) . 408)) nil (25280 25428 540438 176000) 0 nil])
-([nil current ((#("r" 0 1 (fontified t)) . 408)) nil (25280 25428 540432 947000) 0 nil])
+([nil nil ((#("r" 0 1 (fontified t)) . 408)) nil (25280 25428 540432 947000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 34 . 35) (#("
+" 0 1 (c-in-sws t fontified nil)) . -54) (34 . 55) 15 (t 25290 54882 382973 216000)) nil (25293 29887 929495 0) 0 nil])
+([nil nil ((#("window" 0 6 (c-in-sws t fontified t face font-lock-string-face)) . 45)) nil (25293 29887 929493 0) 0 nil])
+([nil nil ((45 . 48)) nil (25293 29887 929492 0) 0 nil])
+([nil current ((426 . 432) (425 . 426)) nil (25293 29887 929488 0) 0 nil])
 nil
