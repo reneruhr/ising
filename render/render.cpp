@@ -48,17 +48,18 @@ auto DrawPoints(const Buffer& buffer) -> std::function<void(MVP, Color)>
 	};
 }
 
-auto DrawColoredPoints(const Buffer& buffer) -> std::function<void(MVP)>
+auto DrawColoredPoints(const Buffer& buffer) -> std::function<void(MVP,float)>
 {
 	auto shader = Shader("render/shaders/points_colored.vert", "render/shaders/points_colored.frag");
 	auto DrawCall = PointsBuffer(buffer);
 	
 	glEnable(GL_PROGRAM_POINT_SIZE);
 
-	return [p = shader.Id(), Draw = DrawCall](MVP mvp)
+	return [p = shader.Id(), Draw = DrawCall](MVP mvp, float point_size)
 	{
 		glUseProgram(p);	
 		glUniformMatrix4fv(glGetUniformLocation(p, "mvp"), 1, GL_FALSE, mvp.data());
+		glUniform1f(glGetUniformLocation(p, "point_size"), point_size);
 		Draw();
 	};
 }

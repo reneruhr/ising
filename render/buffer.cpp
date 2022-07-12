@@ -1,5 +1,5 @@
 #include "buffer.h"
-
+#include <array>
 
 namespace Render
 {

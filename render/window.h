@@ -19,8 +19,10 @@ class Window
 public:
 	Window(std::string title, float ratio, int width);
 	void Run();
+	bool ShouldClose();
 	void Update();
 	void UpdateEvents();
+        void UpdateViewport();
 	void Exit();
 	void AddDrawCall(std::function<void(void)>);
 	auto Width() const -> const int& { return width_;}	

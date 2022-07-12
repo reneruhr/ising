@@ -4,6 +4,7 @@
 #include "../tools/tools.h"
 #include <functional>
 #include <iostream>
+#include <vector>
 
 namespace Render
 {
@@ -30,7 +31,7 @@ private:
   template <class C>
   void AddAttribute(const C& container)
   {
-    using vector = C::value_type;
+    using vector = typename C::value_type;
     auto dim = sizeof(vector)/sizeof(float);		
     auto size = std::size(container) * sizeof(vector);
     size_ = std::size(container);
