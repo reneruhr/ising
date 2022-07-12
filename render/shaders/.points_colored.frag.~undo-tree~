@@ -1,9 +1,0 @@
-(undo-tree-save-format-version . 1)
-"5f540ffbbe34f90a5a95cf6cb1aecc5099ba51c6"
-[nil nil nil nil (25270 64727 135825 774000) 0 nil]
-([nil nil ((75 . 82) (")" . -75) (undo-tree-id3 . -1) ("c" . -76) (undo-tree-id4 . -1) 77 (70 . 77) ("4" . -70) (undo-tree-id5 . -1) 71 (63 . 71) (t 25270 64727 142226 561000)) nil (25270 64769 216378 206000) 0 nil])
-([nil nil (("uniform	vec3 color;
-" . 21) (undo-tree-id2 . -18) 39) nil (25270 64769 216363 888000) 0 nil])
-([nil nil ((62 . 63) 61) nil (25270 64769 216354 949000) 0 nil])
-([nil current ((98 . 102) ("r" . -98) (undo-tree-id0 . -1) (undo-tree-id1 . -1) 99 (97 . 99)) nil (25270 64769 216343 844000) 0 nil])
-nil

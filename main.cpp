@@ -1,7 +1,7 @@
 //
 // Linux:
 //
-// g++ -std=c++20 -Wall *.cpp render/*.cpp tools/*.cpp -render/imgui/*.cpp lglfw -lGLEW -lGL -lX11 -lpthread -lXrandr -lXi -ldl -lm 
+// g++ -std=c++20 -Wall *.cpp render/*.cpp tools/*.cpp render/imgui/*.cpp -o ising -lglfw -lGLEW -lGL -lX11 -lpthread -lXrandr -lXi -ldl -lm 
 // Mac:
 // ~/g++11 -std=c++20 -Wall *.cpp render/*.cpp tools/*.cpp render/imgui/*.cpp -o ising -I/opt/homebrew/include -L/opt/homebrew/lib -lglfw -framework OpenGL -lglew
 
